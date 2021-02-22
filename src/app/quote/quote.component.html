@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
+<div class="container-fluid" >
+    <div class="column">
+        <div class="col-md-6" class="float-right">
             <h1 class="text-center">Quotes</h1>
             <div *ngFor='let quote of quotes; let i = index'>
                 <div class="card">
@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <p>{{quote.quoteTitle}}</p>
                         <p>By <span class="author">{{quote.author}}</span>.</p>
-                        <button class="btn text-info" (click)='toggleDetails(i)'>Toggle Details</button>
+                        <button type="button" class="btn btn-info" (click)='toggleDetails(i)'>View Details</button>
                         <div *ngIf='quote.showDetails'>
                             <app-quote-details (isDelete)='deleteQuote($event, i)' 
                                             (isIncreaseUpvote)='increaseUpvote($event, i)' 
