@@ -6,13 +6,12 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title">
-                            <small class="float-right"></small>
+                            <small class="float-right">Created On {{quote.createdDate | date}}</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p [appHighlightQuote]='quote'>{{quote.quoteTitle}}</p>
+                        <!-- <p [appHighlightQuote]='quote'>{{quote.quoteTitle}}</p> -->
                         <p>By <span class="author">{{quote.author}}</span>.</p>
-                        <p>author</p>
                         <button class="btn text-info" (click)='toggleDetails(i)'>Toggle Details</button>
                         <div *ngIf='quote.showDetails'>
                             <app-quote-details (isDelete)='deleteQuote($event, i)' 
