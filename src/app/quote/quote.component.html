@@ -10,7 +10,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <p >>{{quote.quoteTitle}}</p>
+                        <p>{{quote.quoteTitle}}</p>
                         <p>By <span class="author">{{quote.author}}</span>.</p>
                         <button class="btn text-info" (click)='toggleDetails(i)'>Toggle Details</button>
                         <div *ngIf='quote.showDetails'>
