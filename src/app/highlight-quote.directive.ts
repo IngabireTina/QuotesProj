@@ -10,7 +10,7 @@ export class HighlightQuoteDirective {
    }
 
   private highlightQuote() {
-    this.elem.nativeElement.style.backgroundColor="yellow"
+    this.elem.nativeElement.style.backgroundColor="green"
   }
   
 
