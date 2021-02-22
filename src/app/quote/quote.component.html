@@ -12,13 +12,13 @@
              <div *ngFor='let quote of quotes; let i = index'>
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">
+                        <div class="card-title" style="color: black;">
                             <small class="float-right">Created On {{quote.createdDate | date}}</small>
                         </div>
                     </div>
                     <div class="card-body">
-                        <p>~ {{quote.quoteTitle}} ~</p>
-                        <p >By <span class="author">{{quote.author}}</span>.</p>
+                        <p style="color: black;">~ {{quote.quoteTitle}} ~</p>
+                        <p style="color: black;">By <span class="author">{{quote.author}}</span>.</p>
                         <button type="button" class="btn btn-info" (click)='toggleDetails(i)'>View Details</button>
                         <div *ngIf='quote.showDetails'>
                             <app-quote-details (isDelete)='deleteQuote($event, i)' 
